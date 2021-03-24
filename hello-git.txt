@@ -15,6 +15,7 @@ git reset --hard commit_id
  
 git diff HEAD -- readme.txt 
 
-
-git checkout -- readme.txt ，把readme.txt文件在工作区的修改全部撤销,直到add 或者 commit缓冲区的状态
+checkout是用版本库里的版本替换工作区的版本，无论工作区是修改还是删除，都可以“一键还原”。
+1.git checkout -- readme.txt ，把readme.txt文件在工作区的修改全部撤销,直到add 或者 commit缓冲区的状态
+2.git reset HEAD <file> 或者git restore --staged hello-git.txt 撤销缓存区内容
  
