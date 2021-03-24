@@ -1,11 +1,10 @@
 20200324
-git test 
 
-2nd commit
+git 电脑上可见的文件夹，叫做工作区。。
+然后push到的地方叫做本地库master。
+最后commit去的地方叫做远端origin。
 
 
-3rd commit 
-good morning
 git reset --hard HEAD^ 上一个版本
 git reset --hard commit_id
 
@@ -18,4 +17,40 @@ git diff HEAD -- readme.txt
 checkout是用版本库里的版本替换工作区的版本，无论工作区是修改还是删除，都可以“一键还原”。
 1.git checkout -- readme.txt ，把readme.txt文件在工作区的修改全部撤销,直到add 或者 commit缓冲区的状态
 2.git reset HEAD <file> 或者git restore --staged hello-git.txt 撤销缓存区内容
+
+HEAD是当前库，HEAD^是上一个库头，origin是远程库，master是本地库
+将本地库与远程库关联
+git remote set-url origin https://github.com/xmanrui/autoftp.git
+git remote add origin git@github.com:michaelliao/learngit.git
+git push origin master
+
+删除”其实是解除了本地和远程的绑定关系，并不是物理上删除了远程库
+git remote -v查看远程库信息
+
+从远程库 克隆一个本地库：
+git clone git@github.com:ipiphj/good-afternoon.git
+
+ 创建一个分支的两种方法
+ git branch -d dev 
+ git switch -c dev2
  
+ 查看分支
+ git branch
+  
+ eg.切到主分支master，然后创建主分支的镜像分支dev 
+ git switch master
+ git branch -d dev
+ 
+ git checkout main
+ git branch -d bug-101
+ 
+ git stash创建缓冲保存区
+ 恢复缓冲git stash apply 删除git stash drop
+ 或者git stash pop恢复后删除
+ 
+ 打标签
+ git tag v0.9 f52c633
+ $ git tag -a v0.1 -m "version 0.1 released" 1094adb
+ git tag -d v0.1
+ 
+ $ git config --global color.ui true
