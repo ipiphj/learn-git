@@ -10,4 +10,4 @@ git reset --hard HEAD^ 上一个版本
 git reset --hard commit_id
 
 
-Git tracks changes.
+ 
