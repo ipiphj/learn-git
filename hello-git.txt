@@ -9,5 +9,12 @@ good morning
 git reset --hard HEAD^ 上一个版本
 git reset --hard commit_id
 
-
+ git add readme.txt
+ git commit -m "add distributed"
+ 
+ 
 git diff HEAD -- readme.txt 
+
+
+git checkout -- readme.txt ，把readme.txt文件在工作区的修改全部撤销,直到add 或者 commit缓冲区的状态
+ 
